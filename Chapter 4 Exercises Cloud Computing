@@ -1,0 +1,81 @@
+#E.Datacenter.1: Complete definitions of the terms used in the relevant section.
+* Data Center Energy Costs: the cost of energy used to operate datacenter equipment. 
+* Energy usage is measured by kilowatts used per hours, kWh
+* Energy Consumption= (kWh)(number of minutes the power was consumed)
+* Energy costs depend on two things: energy and demand changes
+* Energy demand: In a 15 minute period it is the highest total consumption
+* Virtualization reduces energy costs by highly utilizing a few servers rather than running many server
+* As more serves are utilized the demand charge will level out
+
+
+#E.Datacenter.2: Carbon footprints of data centers
+* Datacenters consume a large amount of energy which contributes to green house gases and carbon emissions
+* Datacenters consumption of energy is positively related to: data demand, high performance systems, and bandwidth
+* By 2020 it is estimated that 139 billion kWh of energy will be used in that year alone
+* Peaking Plants, Peakers: power plants that generate large amounts of carbon emissions, because they are powered by coal.
+* Peakers, offer more expensive energy and are only used when there is high demand for energy
+* Avoided Emissions: efforts to reduce carbon emissions by using energy efficient technologies and tactics to reduce underground carbon from escaping
+* Carbon dioxcide, CO2: carbon has a life cycle of 100 years, datacenters and energy plants release large amounts of CO2 into the atmosphere
+* Datacenter carbon profile: records and calculated the carbon released durring decommissioning, manufacturing, operation, transportation, packaging, and storage of data
+* Power Usage Effectiveness, PUE: is used to determine how much energy is used for computing equipment vs. other energy costs
+* A PUE of less than 50% is inefficient, a PUE of 50% is average, and a PUE of over 50% is efficient
+
+
+#E.Datacenter.2.b: Table
+:Cost of the data center {#tbl:datacentercost-table}
+Data Center      Location           Year    Electricity cost    IT Load       Yearly Cost     Yearly CO2 Footprint    Equivalent in Cars     Source
+______________   _______________    ____    ________________    __________    ____________    _____________________   __________________     ______
+IU Bloomington   Bloomington, IN    2009    0.10
+Equinix          Seattle, WA        2018    0.08                1,849,325     $22,450,000     107,522                 23,704                 https://www.equinix.com/resources/infopapers/2019-cdp-climate-change-survey/
+
+
+#E.Datacenter.3: Your own carbon footprint
+*Added the Equinix row to the data spreadsheet "Sheet CarbonFootPrint"
+
+
+#E.Datacenter.4:Pick a renewable energy from Section 4.1.10 and describe what it is, find data centers that use that energy form, include information in hid directory in datacenter.md
+* Solar: energy created from the sun's energy which is harvested by using solar panels.  Google just bilt the largest solar farms in existence in Alabama and Tennessee
+* Energy Centers that use Solar Energy:Findland, Alabama, Tennessee, North Carolina, Netherlands, Iowa, Tiawan
+* Google Data Center Fleet: the Dalles, Mayes County, Council Bluffs, Lenoir, Berkley County, Douglas County, Quilicura, Eernshaven, Dublin, St. Ghislain, Hamina, Singapore, Changua County, and Data Center
+
+
+#E.Datacenter.5: Pick a country, state, or company from Section 4.1.11 and summarize their efforts towards renewable energy and impacts on society, add it to datacenter.md and cite internet resources
+* Google:dedicated to reducing carbon emissions by matching thier entire annual electricity consumption with renewable energy, invest money in solar panels
+* 5,475 megawatts of solar energy, long term inccremental solar energy purchases with a goal of transitioning all energy to renewable sources
+* Google is providing more grants for renewable energy sources (REBA)
+*source: https://blog.google/outreach-initiatives/sustainability/our-biggest-renewable-energy-purchase-ever/
+ 
+
+#E.Datacenter.6: write about cooling technologies in datacenter rack doors, so it will be contributed to Section 4.1.5
+* Water cooled doors that are at the rack, many vendors provide cooling
+* Data Center Rack Cooling with Rear Door Heat Exchanger: liquid cooling devices are being used more often then under floor air flow cooling devices.
+* Liquid cooling devices in server racks, airflow from the server rack removes servers heat by using the central chiller plant's cooling water that is circulated througout the plant. 
+* The cooling water is circulated through a heat exchanger plate and frame in the cooling tower.
+* There are a couple of cooling options: rear door heat exchangers that have a fan, in row coolers, closed coulped coolers, and modular overhead coolers.
+* An Rear Door Heat Exchangers, RDHx cooling device, can be used to cool the air flow, by exchanging heat from the air to the cold water in the cooling tower.
+* Source: https://datacenters.lbl.gov/sites/all/files/rdhx-doe-femp.pdf
+
+
+#E.Datacenter.7: Review the nature article, is there anymore data available?  What lessons do you take from the article?
+* The nature artcle describes how the amount of data being collected is increasing exponentially.  
+* Many websites and companies are collecting data like: Facebook, Apple, Microsoft, Amazon, Alphabet, and Bitcoin.
+* To meet the increased data demand more data centers are being built and more energy is being used.
+* There are many energy demands from the main sources: networks, ICT production, data centers, and consumer devices; all of which are exponentially increasing
+* Virtual currencies like Bit coin also increase the demand for data centers and energy with all the transaction data it generates
+* Open Computer Project was created to find more energy efficient solutions for data centers
+* Power Usage Efficiency, PUE is used to calculate the efficiency of data centers
+* PUE is calculated by total energy used divided by the total computing energy use.
+* PUE can be increased by eliminating zombie severs, servers that are not used but take up power
+* Autoscaling saves power by reducing the number of servers being used during low traffic hours
+* Cooling towers can increase energy costs, save money in cooler climates by using outside air to cool servers or use piped water
+
+
+#E.Datacenter.8: Find major data center outages, discuss impact on the internet and user community, how many users/services were impacted and which, cost revenue loss, media impact?
+* Microsoft's software Microsoft Teams data outage effected 20 million users worldwide, no one was able to login, productivity costs
+* The system failure was attributed to a build up of many small mistakes, one of which was the failure to updat the Secure Socket Layer, SSL certificate
+* A google search revealed that data center outages can cost a company $9,000 a minute, no exact financial losses were included in the article
+* Source: https://www.inc.com/jason-aten/microsoft-made-simplest-mistake-that-inconvenienced-20-million-users.html
+
+
+#E.Datacenter.9: optional
+
