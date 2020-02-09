@@ -1,0 +1,109 @@
+###8.4.3 Exercises
+
+
+
+## E.Multipass.1a: Installed multipass in MacOS
+
+
+## E.Multipass.2: What is primary multipass?
+* A primary instance in multipass is a multipass shell command in a Ubuntu instance.  Selecting the GUI open shell button also can create a primary instance.
+* The primary instance is configured wih memory, CPU, and disk and derived from Ubuntu’s latest image.  
+* A launch command with no arguments has the same properties as a primary
+* Only one primary can be launched at a time
+* The code $ multipass start, is used to start a primary
+* The primary instance’s default name is primary.  
+* The default name can be altered to a custom name using the code: $ multipass set client.primary-name=<custom_name>
+* Source: https://multipass.run/docs/primary-instance
+
+
+## E.Multipass.3: What is a snapcraft in multipass?
+* Snapcraft is a product of Snappy which is a software for the Linux operating system that is a package management and software deployment system (software testing).  
+* Multipass is a snap application.
+* Snapcraft is versatile command line tool that is used to create snap packages 
+* Source: https://snapcraft.io/blog/introduction-to-snapcraft
+
+
+## E.Multipass.4: How do you write a bibtex entry? Add Bibtex entries.
+* Bibtex entries can be a file ending in .bib or a reference annotation
+* Bibtex records where the author, title, publish, year, address, edition, and url information is stored and posted.
+* A Bibtex entry for the website: https://multipass.run/ would be:
+@Misc{book-multipass-run,
+	author= {{Multipass}}
+	title= {{Instant Ubuntu VMs}}
+	year= 2020,
+	howpublished= {Web Page},
+	url= 
+		{https://multipass.run}
+* Could not find examples in the multipass.md file, I could not find the multipass.md file
+
+
+## E.Multipass.5: Provide more examples for find.  Provide a list of images that are supported on your system.
+*  The multipass find function retrieves a list of images that your current system supports
+:Multipass Find Table {#tbl:currentmultipassfind-table}
+Image             Aliases            Version                  Description   
+_______       ________         __________          ______________    
+16.04            xenial                20200129              Ubuntu 16.04 LTS
+18.04            bionic, lts          20200129.1          Ubuntu 18.04 LTS
+
+
+## E.Multipass.6: Explain cloud-init.  Provide an example.
+* Cloud-int is a cloud instance initialization multi distribution method that reads, process, and parses metadata.  
+* Cloud-int configures SSH access keys, storage, network devices, and other system components.  
+* Source: https://cloudinit.readthedocs.io/en/latest/
+
+
+## E.Multipass.7: Install MikroK8s in multipass and provide a users guide.
+#How to install Multipass on a macOS system:
+* 1.  Install Multipass
+* 2.  Launch an instance in Multipass
+* $ multipass launch –name microk8s-vm –mem 4G
+* 3.  Enter the VM instance
+* $ multipass shell microk8s-vm
+* 4.  Install microk8s snap
+* $ sudo snap install microk8s --classic
+* 5.  Check the status
+* $ sudo microk8s.status –wait-ready
+* 6.  Turn on standard services
+* $ sudo microk8s.enable dns dashboard registry
+* Source: https://microk8s.io/ (list is directly quoted from the source website)
+
+
+## E.Multipass.8: Use and improve cloudmesh-multipass.
+* 1.  Does Provider.py have all important functionality?
+* Could not find the python file Provider.py, I am not sure what the functionality of Provider.py is
+* 2.  Is all the functionality exposed throughout the multipass provider?
+* 3. Research cloudmesh pytests
+* A pytest is used to test the functionality of python codes.
+* The code used to run a pytest is: $ pip install pytest
+* The results of the test will be stored in the test folder, -m can be used as the test switch.
+* 
+* Source: https://cloudmesh.readthedocs.io/en/latest/pytest.html
+* 4.  Develop a pytest, put results in a table using benchmarks from cloudmesh
+* 5. Split the work up among class participants
+* Measure the performance of fetching and launching the image with the different hypervisors on your system.  
+* Report the results in a table with a timer for each hypervisor and distinguish fetching and launching times.  
+* Measure the time to execute a command in the virtual machine. 
+* Table will have columns (Image, Hypervisor, Fetch, Launch Execute)
+* Make sure to purge the images between tests
+* Use a pytest and cloudmesh Benchmark for creating the Benchmarks.  The pytesr can be shared amoung all students.
+* Discuss on Piazza how to do it.
+* Use cloud mesh shell variable for the Hypervisor type.
+
+
+## E.Multipass.9a: What is K3s?
+* K3s is a lightweight Kubernetes edge computing and internet of things distribution.  
+* K3s works well with internet of things, ARM, edge, Raspberry Pi, and CI.
+* K3s can be used to simplify multipass processes by reducing the steps to install, run, and auto update Kubernetes clusters.
+*Diagram of how K3s works:
+ 
+* Source: https://k3s.io/
+
+ 
+
+## E.Multipass.9b: Create a cloudmesh and start a k3s cluster 
+* Use cloudmesh sys command generate k3s, cms k3s [-hypervisor=hyperkit] -names=”node[0-3]” deploy
+* Extend the command list to include: start, stop, purge, delete
+
+
+## E.Multipass.10: Improve the multipass provider from the ComputeNodeABC.py
+* Implement as many functions as you can, make pull requests into the repository
