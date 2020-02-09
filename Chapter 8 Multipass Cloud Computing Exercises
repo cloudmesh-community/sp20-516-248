@@ -54,18 +54,19 @@ _______       ________         __________          ______________
 
 ## E.Multipass.7: Install MikroK8s in multipass and provide a users guide.
 #How to install Multipass on a macOS system:
-* 1.  Install Multipass
-* 2.  Launch an instance in Multipass
+* 1.  Multipass Installation
+* 2.  Launching a new multipass instance
 * $ multipass launch –name microk8s-vm –mem 4G
-* 3.  Enter the VM instance
+* 3.  Specifying the multipass virtual machine instance
 * $ multipass shell microk8s-vm
-* 4.  Install microk8s snap
+* 4.  Installing the snap microk8s application 
 * $ sudo snap install microk8s --classic
-* 5.  Check the status
+* 5.  Checking the status of mocrok8s
 * $ sudo microk8s.status –wait-ready
-* 6.  Turn on standard services
+* 6.  Turning on standard services in micok8s
 * $ sudo microk8s.enable dns dashboard registry
-* Source: https://microk8s.io/ (list is directly quoted from the source website)
+* Source: https://microk8s.io/ 
+
 
 
 ## E.Multipass.8: Use and improve cloudmesh-multipass.
@@ -76,7 +77,6 @@ _______       ________         __________          ______________
 * A pytest is used to test the functionality of python codes.
 * The code used to run a pytest is: $ pip install pytest
 * The results of the test will be stored in the test folder, -m can be used as the test switch.
-* 
 * Source: https://cloudmesh.readthedocs.io/en/latest/pytest.html
 * 4.  Develop a pytest, put results in a table using benchmarks from cloudmesh
 * 5. Split the work up among class participants
