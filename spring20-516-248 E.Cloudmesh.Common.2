@@ -1,0 +1,15 @@
+#E.Cloudmesh.Common.2 
+#Develop a program that demonstrates the use of dotdict
+#used to eliminate brackets in the code by using a perio instead, thus simplifying the code
+from cloudmesh.common.dotdict import dotdict
+data={
+  "name": "Hannah"
+  }
+  data=dotdict(data)
+  data["name"]
+  data.name
+  
+  if data.name is "Hannah":
+    print("This is Correct!")
+  else:
+    print("Nope, not quite!")
