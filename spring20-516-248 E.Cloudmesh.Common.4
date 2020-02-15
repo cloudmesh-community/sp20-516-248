@@ -1,2 +1,23 @@
 ##E.Cloudmesh.Shell.4
-#If you have useful extensions that you would like to add by default, please work with us
+#Develop a program that demostrates the use of cloudmesh.common.Shell
+#Shell in python is used for implementing background processes
+
+from cloudmesh.common.Shell import Shell
+
+result=Shell.execute('pwd')
+print(result)
+
+result=Shell.execute('ls', ["-1", "-a"])
+print(result)
+
+result=Shell.execute('ls', "-1-1")
+print(result)
+
+result=Shell.ls("-aux")
+print(result)
+
+result=Shell.ls("-a", "-u", "-x")
+print(result)
+
+result=Shell.pwd()
+print(result)
