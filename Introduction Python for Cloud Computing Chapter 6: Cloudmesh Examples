@@ -1,0 +1,22 @@
+from cloudmesh.common.console import Console
+msg= "my message"
+Console.ok(msg) # prins a green message
+Console.error(msg) # prins a red message proceeded with ERROR
+Console.msg(msg) # prins a regular black message
+
+Console.error(msg, prefix=True, traceflag=True)
+
+from cloudmesh.common.variables import Variables
+variables = Variables()
+variables['debug'] = True
+variables['trace'] = True
+variables['verbose'] = 10
+
+from cloudmesh.common.util import banner
+banner("my text")
+
+from cloudmesh.common.util import HEADING
+class Example(object):
+def doit(self):
+HEADING()
+print ("Hello")
