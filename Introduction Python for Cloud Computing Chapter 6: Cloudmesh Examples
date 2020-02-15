@@ -20,3 +20,103 @@ class Example(object):
 def doit(self):
 HEADING()
 print ("Hello")
+
+from cloudmesh.common.variables import Variables
+variables = Variables()
+variables['debug'] = True
+variables['trace'] = True
+variables['verbose'] = 10
+
+from cloudmesh.common.util import banner
+banner("my text")
+
+from cloudmesh.common.util import HEADING
+class Example(object):
+def doit(self):
+HEADING()
+print ("Hello")
+
+from cloudmesh.common.debug import VERBOSE
+m = {"key": "value"}
+VERBOSE(m)
+
+from pprint import pprint
+d = {"sample": "value"}
+print("MYDEBUG:")
+pprint (d)
+# or with print
+print("MYDEBUG:", d)
+
+from cloudmesh.common.dotdict import dotdict
+data = {
+"name": "Gregor"
+}
+data = dotdict(data)
+
+data["name"]
+
+data.name
+
+if data.name is "Gregor":
+print("this is quite readable")
+
+if data["name"] is "Gregor":
+print("this is quite readable")
+
+from cloudmesh.common.Flatdict import FlatDict
+data = {
+"name": "Gregor",
+"address": {
+"city": "Bloomington",
+"state": "IN"
+}
+}
+flat = FlatDict(data, sep=".")
+
+flat = {
+"name": "Gregor"
+"address.city": "Bloomington",
+"address.state": "IN"
+}
+
+from pprint import pprint
+from cloudmesh.common.Printer import Printer
+data = [
+{
+"name": "Gregor",
+"address": {
+"street": "Funny Lane 11",
+"city": "Cloudville"
+}
+},
+{
+"name": "Albert",
+"address": {
+"street": "Memory Lane 1901",
+"city": "Cloudnine"
+}
+}
+]
+pprint(data)
+table = Printer.flatwrite(data,
+sort_keys=["name"],
+order=["name", "address.street", "address.city"],
+header=["Name", "Street", "City"],
+output='table')
+print(table)
+
+
+from cloudmesh.common.Shell import Shell
+result = Shell.execute('pwd')
+print(result)
+result = Shell.execute('ls', ["-l", "-a"])
+print(result)
+result = Shell.execute('ls', "-l -a")
+print(result)
+
+result = Shell.ls("-aux")
+print(result)
+result = Shell.ls("-a", "-u", "-x")
+print(result)
+result = Shell.pwd()
+print(result)
