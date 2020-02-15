@@ -1,0 +1,12 @@
+##E.Cloudmesh.Shell.5
+#Develop a program that demostrates the use of cloudmesh.common.StopWatch
+#Stopwatch command is used measures the amount of time between two events
+
+from cloudmesh.common.StopWatch import StopWatch
+from time import sleep
+
+StopWatch.start("test")
+sleep(1)
+StopWatch.stop("test")
+print(StopWatch.get("test"))
+StopWatch.benchmark()
