@@ -15,6 +15,12 @@ class Example(object):
 
 #Verbose
 #used in printing a dictionary, file, line number, and dictionary name information
+from cloudmesh.common.variable import Variables
+variables=Variables()
+variable['debug']=True
+variable['trace']=True
+variabel=['verbose']=10
+
 from cloudmesh.common.debug import VERBOSE
 cloudmesh.common.debug.VERBOSE(msg, label=None, color='GREEN', verbose=9, location=True, secrets=['OS_PASSWORD', 'OS_USERNAME', 'cleient_secret', 'client_id', 'project_id', 'AZURE_TENANT_ID, 'AZURE_SUBSCRIPTION_ID', 'AZURE_APPLICATION_ID', 'AZURE_SECRET_KEY:TBD', 'EC2_ACESS_ID:TBD', 'EC2_SECRET_KEY', 'MONGO_PASSWORD'])
 m={"key": "value"}
