@@ -1,0 +1,22 @@
+##E.Cloudmesh.Common.3
+#Develop a program that demonstrates the use of FlatDict
+#FlatDictionary is used when dictionaries contrain dictionaries to flatten the dictionary
+
+from cloudmesh.common.Flatdict import FlatDict
+data={
+  "name": "Hannah"
+  "address": {
+    "street": "305 Mt. Rainer Drive"
+    "city": "Seattle"
+    "state": "Washington"
+    }
+   }
+   flat=FlatDict(data, sep=".")
+   
+   #Converting the dictinary into a flat structure
+   flat={
+    "name": "Hannah"
+    "address.street": "305 Mt. Rainer Drive"
+    "address.city": "Seattle"
+    "address.state": "Washington"
+   }
