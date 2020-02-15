@@ -1,22 +1,24 @@
-##E.Cloudmesh.Common.4
-#Develop a program that demonstrates the use of cloudmesh.common.Shell
-#Shell in python is used for implementing background processes.
+##E.Cloudmesh.Common.3
+#Develop a program that demonstrates the use of FlatDict
+#Flat dictionaries in python are used to flatten dictionaries when dictionaries have dictionaries within them
 
-from cloudmesh.common.Shell import Shell
-result=Shell.execute('pwd')
-print(result)
+from cloudmesh.common.Flatdict import FlatDict
 
-result=Shell.execute('ls', ["-1", "-a"])
-print(result)
+data={
+  "name": "Hannah",
+  "address": {
+    "street": "305 Mt. Rainer Drive",
+    "city": "Seattle",
+    "state": "WA"
+   }
+  }
+  
+flat=FlatDict(data, sep=".")
+flat={
+  "name": "Hannah"
+  "address.street": "305 Mt. Rainer Drive",
+  "address.city": "Seattle"
+  "address.state": "WA"
+ }
+  
 
-result=Shell.execute('ls', "-1-a")
-print(result)
-
-result=Shell.ls("-aux")
-print(result)
-
-result=Shell.ls("-a", "-u", "-x")
-print(result)
-
-result=Shell.pwd()
-print(result)
