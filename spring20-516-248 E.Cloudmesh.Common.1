@@ -1,0 +1,21 @@
+#Develop a program that demonstrates the use of banner, heading, and verbose
+
+#Banner
+from cloudmesh.common.util import banner
+cloudmesh.common.util.banner(txt=None, c='-', prefix='#', debug=True, label=None, color='BLUE')
+banner("Hannah Bookland's First Cloudmesh Assignment")
+
+#Header
+from cloudmesh.common.util import HEADING
+cloudmesh.common.util.HEADING(txt=Nonr, c='#', color='HEADER')
+class Example(object):
+  def doit(self):
+  HEADING()
+  print("Welcome to Hannah Bookland's First Cloudmesh Assignment!")
+
+#Verbose
+#used in printing a dictionary, file, line number, and dictionary name information
+from cloudmesh.common.debug import VERBOSE
+cloudmesh.common.debug.VERBOSE(msg, label=None, color='GREEN', verbose=9, location=True, secrets=['OS_PASSWORD', 'OS_USERNAME', 'cleient_secret', 'client_id', 'project_id', 'AZURE_TENANT_ID, 'AZURE_SUBSCRIPTION_ID', 'AZURE_APPLICATION_ID', 'AZURE_SECRET_KEY:TBD', 'EC2_ACESS_ID:TBD', 'EC2_SECRET_KEY', 'MONGO_PASSWORD'])
+m={"key": "value"}
+VERBOSE(m)
