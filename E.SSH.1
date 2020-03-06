@@ -1,0 +1,42 @@
+#Create a SSH key pair
+*There are several ways to create an SSH key pair, through OpenSSH client on Windows, Gitbash, Makefiles on Windows, Cygwin, Putty, Chocolatey, and ZSH
+
+#To check whether there are already keys on the computer and to see what is in the .ssh directory:
+    *ls ~/.ssh
+    *if the computer has the files id_dsa.pub then keys are already setup on the computer    
+
+#To generate a key:
+  *ssh-keygen -t rsa -C <comment>
+  *create a comment to remind you that a key has already been created
+
+#Enter a default location/file to store a key
+  *should use the default location ~/.ssh/ and the default name id_rsa
+  *press enter
+  
+#Create a passphrase for the key
+
+#To check whether the ssh key is in the directory
+  *cat ~/.ssh/id_rsa.pub
+
+#To change your passphrase, us the ssh-keygen command:
+  *ssh-keygen -p
+  
+#To add a key pair to your current session, use the command ssh-add
+  *ssh allwos the user to use any number of servers from many different organizations 
+  *without having to retype your password everytime when connecting between servers
+  *used by system administrators to login to multiple servers
+  
+#To us ethe SSH key across terminal shells, ass an SSH agent:
+  *eval "ssh-agent"
+  *eval "$(ssh-agent -s)"
+  
+ #To add a key use:
+  *ssh-add
+ 
+ #To remove the agent:
+  *kill $SSH_AGENT_PID
+  
+  
+  
+  #Ussing SSH on Mac
+  *open up the terminal
