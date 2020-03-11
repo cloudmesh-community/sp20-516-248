@@ -1,0 +1,55 @@
+###E.Python.Install:
+
+##E.Python.Install 1
+#Install Python 3.8.1
+*There are many ways to install python, one way to install python is to use homebrew, by typing the code "brew install python" into the terminal.
+*One can also install python, by visiting the site https://www.python.org/downloads and doenloading the latest python version, python 3.8
+
+##E.Python.Install.1:
+#Write installation instructions for an operating system of your
+choice and add to this documentation.
+*For mac users you can install the latest python version, python 3.8 by visiting the python site https://www.python.org/downloads and following the dowload instructions
+*Python can also be installed on the mac system by using homebrew and by typing the code "brew install python" into the terminal.
+*Python can also be installed using Ubantu by typing the following code:
+    sudo apt-get update
+    sudo apt install software-properties-common
+    sudo add-apt-repository ppa:deadsnakes/ppa -y
+    sudo apt-get install python3.8 python3-dev -y
+*Python can also be installed via conda with the following code:
+    cd ~
+    conda create -n ENV3 python=3.8.1
+    conda activate ENV3
+    conda install -c anaconda pip
+    conda deactivate ENV3
+*New versions of python can also be installed busing the following code:
+  *If you have an older version of python on your mac computer, you need to deactivate that older version first:
+      pyenv deactivate
+      pyenv uninstall ENV3
+  *Then you can install the newer version of python using the code:
+      pyenv install 3.8.1
+      pyenv virtualenv 3.8.1 ENV3
+      ENV3
+      pip install pip -U
+
+##E.Python.Install.2:
+#Replicate the steps to install pyenv, so you can type in ENV2 and
+ENV3 in your terminals to switch between python 2 and 3.
+*You can install pyenv by using the code:
+    pyenv install -l
+*You can install python versions 2.7 and 3.8 using the code:
+    pyenv update
+    pyenv install 2.7.16
+    pyenv install 3.8.1
+*Associate python with ENV2 and ENV3 commands
+    pyenv virtualenv 2.7.16 ENV2
+    pyenv virtualenv 3.8.1 ENV3
+ *To switch to python version 2.7, use the code: ENV2
+ *To switch to python 3.8, use the code: ENV#
+
+##E.Python.Install.3:
+#Why do you not want to use generally anaconda for cloud
+computing? When is it ok to use anaconda?
+*You do not want to use anaconda for cloud computing because it comes with too many packages, many of which you will never use and will take up valuable time and data storage space on your computer
+*Anaconda may interfere with default python interpreters and setup
+*Anaconda terminology can also be confusing since the version number in python is not related t the anaconda version number.
+*For the root directory anaconda does not use the root term for the root user, this can also be confusing.
