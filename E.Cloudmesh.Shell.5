@@ -1,0 +1,20 @@
+# At this time one needs to quote in some commands the " in the
+shell command line. Develop and test code that fixes this.
+
+Currently cmd5 has a quotes in the commandline bug, there are issues with the code:
+    cms hannah -f \"file name with spaces\"
+To fix this bug, one must use shelx.
+
+shlex.quotes can be used
+  *shelex.quotes: includes both double and single quotes.  Considers characters as string quotes.
+  
+  Example Code:
+  import shlex 
+  s=shlex.shlex("Good Morning Hello Sun"), punctuation_chars="")
+  list(s)
+  
+  Example Code:
+  import shlex
+  from shlex import quote
+  s = "Good Morning Hello Sun".format(quote=" ")
+  print(s)
