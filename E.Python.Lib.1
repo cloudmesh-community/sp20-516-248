@@ -50,3 +50,23 @@ class Iterable(object):
         if self.n%5!=0:
             print('The integer n is not a multiple of either 3 or 5!')
             raise StopIteration
+            
+            
+            
+ *Example Code:
+n = int(input("Please enter an integer, n from 1 to infinity:"))
+
+while n<1:
+    print('Please enter a number larger than 1!')
+    end
+while n%(5*3)==0:
+    print('The integer n is a multiple of both 3 and 5!')
+    end
+while n%3 == 0:
+    print('The integer n is a multiple of 3!')
+    end
+while n%5== 0:
+    print('The integer n is a multiple of 5!')
+    end
+else:
+    print('The integer n is not a multiple of either 3 or 5!')
